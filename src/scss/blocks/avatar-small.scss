@@ -1,0 +1,13 @@
+.avatar-small {
+  overflow: hidden;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #5f86a0;
+}
+
+.avatar-small img { 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} 

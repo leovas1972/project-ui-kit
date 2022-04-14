@@ -1,0 +1,38 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Нотификация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Нотификация
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        +notification('сообщение об ошибке', 'red')
+        +notification('сообщение о действии', 'yellow')
+        +notification('сообщение об успехе', 'green')
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +notification('сообщение об ошибке', 'red')
+            +notification('сообщение о действии', 'yellow')
+            +notification('сообщение об успехе', 'green')
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/notification.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+          mixin notification(text, color)
+            .notification(class=(color !==''? "notification--"+ color : '')).&attributes(attributes)  #{text}
+              

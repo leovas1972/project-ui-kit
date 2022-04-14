@@ -19,7 +19,7 @@ block content
     //- Код для вызова компонента
     .ui-kit__component-code
         pre.
-            +headline-link(title, link, titleLink)
+            +headline-link('новые записи в ', '#', 'блоге')
 
     //- Файл в котором описан компонент
     .ui-kit__element-title.
@@ -31,4 +31,4 @@ block content
         pre.
             mixin headline-link(title, link, titleLink)
               h2.header__link&attributes(attributes) #{title}
-                a(href= link) #{titleLink}
+                a(href= link) {titleLink}

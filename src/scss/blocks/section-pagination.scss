@@ -1,0 +1,6 @@
+.section-pagination {
+  display: flex;
+}
+.section-pagination .section-pagination__item + .section-pagination__item {
+  margin-left: 15px;
+}

@@ -1,0 +1,39 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Кнопки - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Кнопки(с модификатороми)
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+      +button('#', 'primary')
+      +button('#', 'look', 'Смотреть')
+      +button('#', 'file', 'Выбрать фаил')
+      +button('#', 'delete', 'Удалить')
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+      pre.
+        +button('#', 'primary')
+        +button('#', 'look', 'Смотреть')
+        +button('#', 'file', 'Выбрать фаил')
+        +button('#', 'delete', 'Удалить')
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+      Название файла:
+      mixins/button.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+      pre.
+        mixin button(link, modifier, text="Отправить")
+          button.button(class=(modifier !== ''? 'button--'+ modifier : '') href= link)&attributes(attributes) #{text}

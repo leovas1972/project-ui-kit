@@ -1,0 +1,66 @@
+.button {
+  height: 46px;
+  padding: 13px 20px;
+  border-radius: 6px;
+  border: none;
+  
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  
+  &--primary {
+    background: #000;
+    color: white;
+      
+      
+    &:hover {
+        background: #7e9bbd;
+    }
+      
+    &:active {
+        background: #49525b;
+    }
+  }
+  
+  &--look {
+    background: rgba(255, 255, 255, 0.3);
+    border: 3px solid rgba(126, 155, 189, 0.3);
+    color: #1647ED;
+    font-weight: 600;
+      
+  }
+  
+  &--file {
+    padding: 10px;
+    height: 40px;
+    font-weight: 400;
+    background: #EAEFF2;
+    color: black;
+      
+    &:hover {
+        background: #DEF1FD;
+    }
+      
+    &:active {
+        background: #c4d0d7;
+    }
+  }
+  
+  &--delete {
+    padding: 5px 20px;
+    height: 30px;
+    border-radius: 57px;
+    background: $red2;
+    color: #fff;
+      
+    &:hover {
+        background: $red3;
+    }
+      
+    &:active {
+      background: $red4;
+    }
+      
+  } 
+}

@@ -1,0 +1,57 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Кнопки - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+      Секция подвал
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+      .section-footer 
+        .container 
+          .row 
+            .col.section-footer__copyright 
+              p &#169; Юрий Ключевский передал Леонтьеву Василию
+              p Создано в WebCademy.ru в 2020 году 
+
+            .col.section-social-icons 
+              +social-icons('#', 'youtybe')
+              +social-icons('#', 'instagram')
+              +social-icons('#', 'facebook')
+              +social-icons('#', 'vk')
+              +social-icons('#', 'linkedin')
+              +social-icons('#', 'github')
+    //- Код для вызова компонента
+    .ui-kit__component-code
+      pre.
+        include ./../sections/section-footer.pug
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+      Название файла:
+      sections/section-footer.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+      pre.
+        .section-footer 
+          .container 
+            .row 
+              .col.section-footer__copyright 
+                p &#169; Юрий Ключевский передал Леонтьеву Василию
+                p Создано в WebCademy.ru в 2020 году 
+
+              .col.section-social-icons 
+                +social-icons('#', 'youtybe')
+                +social-icons('#', 'instagram')
+                +social-icons('#', 'facebook')
+                +social-icons('#', 'vk')
+                +social-icons('#', 'linkedin')
+                +social-icons('#', 'github')

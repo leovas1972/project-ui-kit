@@ -1,4 +1,8 @@
 .social-icons__item {
-  width: 30px;
-  height: 21px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.social-icons__item > * {
+  margin-right: 15px;
 }
